@@ -38,8 +38,8 @@ public class ProducerWithKeysDemo {
 		
 		for(int i=0;i < 10;i++) {
 			
-			String topic = "first_topic";
-			String value = "Hello Bro, I am back"+i;
+			String topic = "first_topics";
+			String value = "Hello Bro, I am back-->"+i;
 			String key = "id_"+i;
 			
 			
