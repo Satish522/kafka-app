@@ -36,7 +36,7 @@ public class ProducerWithKeysDemo {
 		KafkaProducer<String, String> producer = new KafkaProducer<String, String>(properties);
 		
 		
-		for(int i=0;i < 10;i++) {
+		for(int i=0;i < 100;i++) {
 			
 			String topic = "first_topics";
 			String value = "Hello Bro, I am back-->"+i;
@@ -48,6 +48,7 @@ public class ProducerWithKeysDemo {
 			
 			logger.info("Key: "+key);
 			
+			Thread.sleep(5000);
 			//Key: id_0  partition 1
 			//Key: id_1  partition 0
 			//Key: id_2  partition 2
