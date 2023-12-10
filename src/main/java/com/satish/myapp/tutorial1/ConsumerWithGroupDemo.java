@@ -12,11 +12,11 @@ import org.apache.kafka.common.serialization.StringDeserializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ConsumerDemo {
+public class ConsumerWithGroupDemo {
 
 	public static void main(String[] args) throws InterruptedException {
-		 final Logger logger = LoggerFactory.getLogger(ConsumerDemo.class);
-		 String groupId = "my_first_group";
+		 final Logger logger = LoggerFactory.getLogger(ConsumerWithGroupDemo.class);
+		 String groupId = "kafka-app-group";
 		 
 		 
 		 Properties prop = new Properties();
@@ -25,7 +25,8 @@ public class ConsumerDemo {
 		 prop.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
 		 prop.setProperty(ConsumerConfig.GROUP_ID_CONFIG, groupId);
 		 prop.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-		 //prop.setProperty(ConsumerConfig.GROUP_INSTANCE_ID_CONFIG)
+		 prop.setProperty(ConsumerConfig.CLIENT_ID_CONFIG, "");
+		 
 		 
 		 KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(prop);
 		 
