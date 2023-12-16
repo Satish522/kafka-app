@@ -93,7 +93,6 @@ public class ConsumerDemoWithThread {
 						 logger.info("Partition: "+ record.partition()+", Offset: "+ record.offset());
 						 
 					 }
-					 
 				
 				}
 			}catch (WakeupException e) {

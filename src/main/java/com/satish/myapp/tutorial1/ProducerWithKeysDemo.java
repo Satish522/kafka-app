@@ -38,7 +38,7 @@ public class ProducerWithKeysDemo {
 		
 		for(int i=0;i < 100;i++) {
 			
-			String topic = "first_topics";
+			String topic = "assign_seek";
 			String value = "Hello Bro, I am back-->"+i;
 			String key = "id_"+i;
 			
